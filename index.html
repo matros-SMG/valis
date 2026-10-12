@@ -18,6 +18,15 @@
 <style>
 :root { --c-canvas: #171b28; --c-surface: #202536; --c-ink: #efe9dc; --c-ink-soft: #adb0bc; --c-accent: #d8c6a2; --c-accent-ink: #1b1710; --c-accent-deep: #d8c6a2; --f-display: "IBM Plex Serif", "Georgia", "Times New Roman", serif; --f-text: "Onest", "Segoe UI", system-ui, sans-serif; --h1k: 1; }
 .s-demo-badge { margin-left: 10px; padding: 2px 8px; border: 1px solid var(--c-accent); border-radius: 999px; font: 500 .7rem/1.4 var(--f-text); letter-spacing: .06em; text-transform: uppercase; color: var(--c-accent); vertical-align: middle; }
+.s-photos.s-photos--one { grid-template-columns: 1fr; }
+.s-photos.s-photos--one figure img { aspect-ratio: 21 / 9; }
+.s-photos.s-photos--two { grid-template-columns: 1fr 1fr; gap: clamp(20px, 3vw, 40px); }
+.s-photos.s-photos--two figure:first-child { grid-column: auto; }
+.s-photos.s-photos--two figure img { aspect-ratio: 4 / 3; }
+@media (max-width: 900px) {
+  .s-photos.s-photos--one figure img { aspect-ratio: 4 / 3; }
+  .s-photos.s-photos--two figure img, .s-photos.s-photos--two figure:first-child img { aspect-ratio: 1 / 1; }
+}
 </style>
 <link rel="stylesheet" href="style-prod.css">
 </head>
@@ -107,6 +116,8 @@
     <p class="s-note">Пряжа и ткань для пошива и вязания оплачиваются отдельно. Цена вязания зависит от узора, штопку считаем по вещи.</p>
   </section>
 
+  <section class="s-photos s-photos--one s-reveal" aria-label="Фото"><figure><img class="" src="assets/remont.webp" alt="Мастер иглой поднимает петли на вязаном рукаве" loading="lazy" decoding="async"><figcaption>Ремонт трикотажа</figcaption></figure></section>
+
   <section class="s-section s-reveal">
     <header class="s-section__head"><h2>Как отдать вещь в работу</h2></header>
     <ol class="s-steps">
@@ -117,8 +128,6 @@
     </ol>
   </section>
 
-  <section class="s-photos s-reveal" aria-label="Фото"><figure><img class="" src="assets/remont.webp" alt="Мастер иглой поднимает петли на вязаном рукаве" loading="lazy" decoding="async"><figcaption>Ремонт трикотажа</figcaption></figure><figure><img class="" src="assets/mashina.webp" alt="Мотки пряжи на вязальной машине Silver Reed" loading="lazy" decoding="async"><figcaption>Вязание на заказ</figcaption></figure><figure><img class="" src="assets/palantin.webp" alt="Вязаный палантин на манекене рядом с бобинами пряжи" loading="lazy" decoding="async"><figcaption>Готовые вещи</figcaption></figure></section>
-
   <section class="s-section s-reveal">
     <header class="s-section__head"><h2>Почему несут в Valis</h2></header>
     <ul class="s-promises">
@@ -128,6 +137,8 @@
       <li><h3>Готовые шапки</h3><p>Из 100 % мериноса (Италия) – можно купить без заказа.</p></li>
     </ul>
   </section>
+
+  <section class="s-photos s-photos--two s-reveal" aria-label="Фото"><figure><img class="" src="assets/mashina.webp" alt="Мотки пряжи на вязальной машине Silver Reed" loading="lazy" decoding="async"><figcaption>Вязание на заказ</figcaption></figure><figure><img class="" src="assets/palantin.webp" alt="Вязаный палантин на манекене рядом с бобинами пряжи" loading="lazy" decoding="async"><figcaption>Готовые вещи</figcaption></figure></section>
 
   <section class="s-section s-reveal">
     <header class="s-section__head s-section__head--reviews"><h2>Отзывы с Яндекс.Карт</h2><p class="s-reviews__rating"><span class="s-reviews__num">5,0</span><span class="s-reviews__stars" style="--r: 5" aria-label="рейтинг 5,0 из 5"></span><span class="s-reviews__count">70 отзывов</span><a class="s-reviews__all" href="https://yandex.ru/maps/org/valis/109334394080/" target="_blank" rel="noopener">Читать все отзывы на Яндекс.Картах</a></p></header>
